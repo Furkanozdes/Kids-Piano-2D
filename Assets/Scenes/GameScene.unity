@@ -596,8 +596,8 @@ MonoBehaviour:
   spawnObject: {fileID: 793186328}
   Notesofit: {fileID: 864790626}
   anim: {fileID: 291976676}
+  CounterText: {fileID: 174516013}
   counterontext: 0
-  counterText: {fileID: 174516016}
   randomImage: {fileID: 3185809392023779189, guid: a5bfd43f707aead47ba5231b3f8f6d17, type: 3}
   s0: {fileID: 21300000, guid: bfeb267ffa5f56f4683c1fb6a278f383, type: 3}
   s1: {fileID: 21300000, guid: b54e0068afc6a484d84c2c7e9efc0c95, type: 3}
@@ -816,8 +816,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 320, y: 169.88}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 320, y: 165.1262}
+  m_SizeDelta: {x: 160, y: 39.5076}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &174516015
 CanvasRenderer:

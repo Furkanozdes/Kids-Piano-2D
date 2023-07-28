@@ -13,12 +13,12 @@ public class BoxControl : MonoBehaviour
     public GameObject spawnObject;
     public GameObject Notesofit;
     public GameObject anim;
+    public GameObject CounterText;
     int counter=0;
-    //public int counterontext = 0;
+    public int counterontext = 0;
     int index = 0;
     GameObject go;
-    //public Text counterText;
-
+    collidercontroller _collidercontroller;
 
     public Image randomImage;
     public Sprite s0;
@@ -35,10 +35,10 @@ public class BoxControl : MonoBehaviour
           2,2,4,2,2,2,4,5,4,2,3,1,5,3,3,3,
           5,3,3,3,5,6,5,3,4,2,4,2,2,2,4,2,
           2,2,4,5,4,2,3,1,5,3,3,        };
-                                                                                                //   sol mi mi mi | sol mi mi mi | sol la sol mi | fa re
-                                                                                                //   fa re re re | fa re re re | fa sol fa re | mi do
-                                                                                                //   sol mi mi mi| sol mi mi mi | sol la sol mi | fa re
-                                                                                                //   fa re re re | fa re re re | fa sol fa re | mi do
+    //   sol mi mi mi | sol mi mi mi | sol la sol mi | fa re
+    //   fa re re re | fa re re re | fa sol fa re | mi do
+    //   sol mi mi mi| sol mi mi mi | sol la sol mi | fa re
+    //   fa re re re | fa re re re | fa sol fa re | mi do
 
 
 
@@ -47,22 +47,29 @@ public class BoxControl : MonoBehaviour
         //create = true;
         // Invoke("checkNotes", 2f);
         //InvokeRepeating("checkNotes", 1f, 2f);
+        _collidercontroller = FindObjectOfType<collidercontroller>();
         images = new Sprite[3];
         images[0] = s0;
         images[1] = s1;
         images[2] = s2;
-        //counterText.text = counterText.text = counterontext + "/56";
+
+    }
+    public void CounteronText(int a)
+    {
+        counterontext = a;
+        CounterText.GetComponent<Text>().text = counterontext + "/56";
     }
 
     void Update()
-    { 
+    {
+        CounteronText(counterontext);
        timer +=Time.deltaTime;
      if (timer > 1)
         {
           Debug.Log(timer);
           SpawnNotes();
           timer = 0;
-          index++;      
+          index++;
           Debug.Log(timer);
          }
         
@@ -208,6 +215,7 @@ public class BoxControl : MonoBehaviour
             int num = UnityEngine.Random.Range(0, images.Length);
             randomImage.sprite = images[num];
     }
+    
     void SpawnNotes()
     {
         if (index < 56)
@@ -271,7 +279,7 @@ public class BoxControl : MonoBehaviour
         {
                 Notesofit.SetActive(false);
                 anim.SetActive(true);
-                //anim.GetComponent<Text> 
+                
         }
         Debug.Log("Counter:");
         Debug.Log(counter);
