@@ -11,7 +11,6 @@ public class BoxControl : MonoBehaviour
     static float timer = 0f;
     public GameObject boxes;
     public GameObject spawnObject;
-    public GameObject Notesofit;
     public GameObject anim;
     public GameObject CounterText;
     int counter=0;
@@ -277,9 +276,8 @@ public class BoxControl : MonoBehaviour
         }
         else
         {
-                Notesofit.SetActive(false);
+               
                 anim.SetActive(true);
-                
         }
         Debug.Log("Counter:");
         Debug.Log(counter);
